@@ -17,14 +17,14 @@ declare -r grayColour="\e[0;37m\033[1m"
 
 function admin(){
     if ! [ $(id -u) = 0 ]; then echo 
-        echo -e "\n${redColour}¡Necesitas ser el root para ejecutar este script!${endColour}\n"
+        echo -e "\n${redColour}¡Necesitas ser el usuario root para ejecutar este script!${endColour}\n"
         exit 1 
     else
-        banner
+        bienvenida
     fi
 }
 
-#Función que te mostrará el banner de bienvenida
+#Función que te mostrará el banner de bienvenida y definición de variables con declare para establecer los colores
 
 function banner(){
     clear
@@ -36,15 +36,42 @@ function banner(){
   ######          ###                                           #VVVVV#
     ##             #                                          ##  VVV  ##
     ##         ###    ### ####   ###    ###  ##### #####     #          ##
-    ##        #  ##    ###    ##  ##     ##    ##   ##      #            ##          
-    ##       #   ##    ##     ##  ##     ##      ###        #            ###      
-    ##          ###    ##     ##  ##     ##      ###       QQ#           ##Q
+    ##        #  ##    ###    ##  ##     ##    ##   ##      #            ##      ${endColour}${greenColour}Linux Admin - By Alberto.${endColour}${redColour} 
+    ##       #   ##    ##     ##  ##     ##      ###        #            ###     ${greenColour}Hecho con amor y café.${endColour}${redColour}
     ##       # ###     ##     ##  ##     ##     ## ##    QQQQQQ#       #QQQQQQ
     ##      ## ### #   ##     ##  ###   ###    ##   ##   QQQQQQQ#     #QQQQQQQ
   ############  ###   ####   ####   #### ### ##### #####   QQQQQ#######QQQQQ
-    ${endColour}\n
-    ${greenColour}Linux Admin - By Alberto.\n${endColour}
+    
+    ${endColour}
     "
+}
+
+#Función que te muestra el menú principal con sus diferentes opciones
+
+function bienvenida(){
+        banner
+        echo -e  "${yellowColour}¿Qué quieres hacer?"${endColour}
+        while :
+        do
+        read respuesta
+        case $respuesta in
+            1)
+                echo -e "${yellowColour}Prueba 1${endColour}"
+                ;;
+            2)
+                echo -e "${yellowColour}Prueba 2${endColour}"
+                ;;
+            0)
+                echo -e "${yellowColour}Saliendo...${endColour}"
+                exit 1;
+                break
+                ;;
+            
+            *)
+                echo "${yellowColour}Opción incorrecta${endColour}"
+                ;;
+        esac
+        done
 }
 
 admin
