@@ -24,6 +24,8 @@ function admin(){
     fi
 }
 
+#Función que te mostrará el banner de bienvenida
+
 function banner(){
     clear
     echo -e "${redColour}                                                 
