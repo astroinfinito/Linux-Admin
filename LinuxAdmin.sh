@@ -63,7 +63,7 @@ function bienvenida(){
                 ;;
             0)
                 echo -e "${yellowColour}Saliendo...${endColour}"
-                exit 1;
+                exit 0; ##Se produce la salida sin errores, por eso se pone exit 0
                 break
                 ;;
             
