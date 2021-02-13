@@ -68,7 +68,7 @@ function bienvenida(){
                 ;;
             
             *)
-                echo "${yellowColour}Opción incorrecta${endColour}"
+                echo -e "${yellowColour}Opción incorrecta${endColour}"
                 ;;
         esac
         done
