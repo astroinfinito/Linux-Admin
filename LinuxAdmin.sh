@@ -25,7 +25,24 @@ function admin(){
 }
 
 function banner(){
-    #Pronto implementaré aquí la función del banner
+    clear
+    echo -e "${redColour}                                                 
+
+                                                                 #####
+                                                                #######
+                   #                                            ##O#O##
+  ######          ###                                           #VVVVV#
+    ##             #                                          ##  VVV  ##
+    ##         ###    ### ####   ###    ###  ##### #####     #          ##
+    ##        #  ##    ###    ##  ##     ##    ##   ##      #            ##          
+    ##       #   ##    ##     ##  ##     ##      ###        #            ###      
+    ##          ###    ##     ##  ##     ##      ###       QQ#           ##Q
+    ##       # ###     ##     ##  ##     ##     ## ##    QQQQQQ#       #QQQQQQ
+    ##      ## ### #   ##     ##  ###   ###    ##   ##   QQQQQQQ#     #QQQQQQQ
+  ############  ###   ####   ####   #### ### ##### #####   QQQQQ#######QQQQQ
+    ${endColour}\n
+    ${greenColour}Linux Admin - By Alberto.\n${endColour}
+    "
 }
 
 admin
